@@ -6,6 +6,13 @@ input.onGesture(Gesture.EightG, function () {
         # # # # #
         . . . . .
         `)
+    basic.showLeds(`
+        . # . . .
+        # # . . .
+        . # # # #
+        . # # # #
+        . # . # .
+        `)
 })
 input.onButtonPressed(Button.A, function () {
     // beber
@@ -48,6 +55,13 @@ input.onGesture(Gesture.SixG, function () {
     basic.showLeds(`
         . . . . .
         . . . . .
+        # # # # #
+        . # # # .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        # . # . #
         # # # # #
         . # # # .
         . . . . .
@@ -125,6 +139,13 @@ input.onGesture(Gesture.ThreeG, function () {
         # # . # #
         . . # . .
         . . # . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        # # # # #
+        . . . . .
+        # . # . #
+        # . # . #
         `)
 })
 basic.forever(function () {
