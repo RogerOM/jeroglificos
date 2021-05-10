@@ -15,7 +15,14 @@ input.onGesture(Gesture.EightG, function () {
         `)
 })
 input.onButtonPressed(Button.A, function () {
-	
+    // beber
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . # # # .
+        `)
 })
 input.onGesture(Gesture.FreeFall, function () {
     basic.showLeds(`
@@ -156,7 +163,4 @@ input.onGesture(Gesture.ThreeG, function () {
         # . # . #
         # . # . #
         `)
-})
-basic.forever(function () {
-	
 })
