@@ -80,14 +80,7 @@ input.onGesture(Gesture.ScreenDown, function () {
         `)
 })
 input.onButtonPressed(Button.AB, function () {
-    // abanicar
-    basic.showLeds(`
-        . # # # .
-        . # # # .
-        . # # # .
-        . . # . .
-        . . # . .
-        `)
+	
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "comida patatas") {
@@ -98,6 +91,7 @@ radio.onReceivedString(function (receivedString) {
             . # # # .
             . . . . .
             `)
+        basic.pause(500)
         basic.showLeds(`
             # . . # .
             # # . # #
@@ -105,6 +99,8 @@ radio.onReceivedString(function (receivedString) {
             . # . . #
             . # . . #
             `)
+        basic.pause(500)
+        basic.clearScreen()
     } else if (receivedString == "bebida") {
         // beber
         basic.showLeds(`
@@ -114,8 +110,19 @@ radio.onReceivedString(function (receivedString) {
             . . # . .
             . # # # .
             `)
-    } else if (false) {
-    	
+        basic.pause(500)
+        basic.clearScreen()
+    } else if (receivedString == "abanicar") {
+        // abanicar
+        basic.showLeds(`
+            . # # # .
+            . # # # .
+            . # # # .
+            . . # . .
+            . . # . .
+            `)
+        basic.pause(500)
+        basic.clearScreen()
     } else {
     	
     }
