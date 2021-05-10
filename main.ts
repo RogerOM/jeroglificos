@@ -1,40 +1,35 @@
-input.onGesture(Gesture.EightG, function () {
-    basic.showLeds(`
-        . . . . .
-        # # # # #
-        . . . . #
-        # # # # #
-        . . . . .
-        `)
-    basic.showLeds(`
-        . # . . .
-        # # . . .
-        . # # # #
-        . # # # #
-        . # . # .
-        `)
-})
 input.onButtonPressed(Button.A, function () {
-    // beber
+    radio.sendString("comida patatas")
     basic.showLeds(`
+        . . . . .
         . . . . .
         # # # # #
         . # # # .
-        . . # . .
-        . # # # .
+        . . . . .
         `)
-})
-input.onGesture(Gesture.FreeFall, function () {
     basic.showLeds(`
-        . . . # .
-        . . # # .
-        . # # # #
-        # . # . .
-        . . # # .
+        # . . # .
+        # # . # #
+        # # . # #
+        . # . . #
+        . # . . #
         `)
 })
 input.onGesture(Gesture.LogoUp, function () {
-	
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        # # . # #
+        . . # . .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        # # # # #
+        . . . . .
+        # . # . #
+        # . # . #
+        `)
 })
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showLeds(`
@@ -44,21 +39,12 @@ input.onGesture(Gesture.TiltLeft, function () {
         # . # . #
         # . # # #
         `)
-})
-input.onGesture(Gesture.SixG, function () {
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        # # # # #
+        . . . # .
         . # # # .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        # . # . #
-        # # # # #
-        . # # # .
-        . . . . .
+        . # # # #
+        # . # . .
+        . . # # .
         `)
 })
 input.onGesture(Gesture.ScreenUp, function () {
@@ -69,6 +55,13 @@ input.onGesture(Gesture.ScreenUp, function () {
         . . # . .
         . . # . .
         `)
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . . . . #
+        # # # # #
+        . . . . .
+        `)
 })
 input.onGesture(Gesture.ScreenDown, function () {
     basic.showLeds(`
@@ -78,20 +71,36 @@ input.onGesture(Gesture.ScreenDown, function () {
         . # . # .
         # . # . #
         `)
+    basic.showLeds(`
+        . . . . .
+        # . # . #
+        # # # # #
+        . # # # .
+        . . . . .
+        `)
 })
 input.onButtonPressed(Button.AB, function () {
-	
+    radio.sendString("abanicar")
+    // abanicar
+    basic.showLeds(`
+        . # # # .
+        . # # # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
 })
 radio.onReceivedString(function (receivedString) {
+    // añadir los que se quieran
     if (receivedString == "comida patatas") {
         basic.showLeds(`
             . . . . .
-            . # # # .
-            # # . # #
+            . . . . .
+            # # # # #
             . # # # .
             . . . . .
             `)
-        basic.pause(500)
         basic.showLeds(`
             # . . # .
             # # . # #
@@ -124,17 +133,18 @@ radio.onReceivedString(function (receivedString) {
         basic.pause(500)
         basic.clearScreen()
     } else {
-    	
+        basic.showString(receivedString)
     }
 })
 input.onButtonPressed(Button.B, function () {
-    // comer
+    radio.sendString("bebida")
+    // beber
     basic.showLeds(`
-        # . # . #
-        # . # . #
+        . . . . .
         # # # # #
+        . # # # .
         . . # . .
-        . . # . .
+        . # # # .
         `)
 })
 input.onGesture(Gesture.TiltRight, function () {
@@ -145,6 +155,21 @@ input.onGesture(Gesture.TiltRight, function () {
         . # . # .
         # . . . #
         `)
+    basic.showLeds(`
+        . # . . .
+        # # . . .
+        . # # # #
+        . # # # #
+        . # . # .
+        `)
+    // comer
+    basic.showLeds(`
+        # . # . #
+        # . # . #
+        # # # # #
+        . . # . .
+        . . # . .
+        `)
 })
 input.onGesture(Gesture.LogoDown, function () {
     basic.showLeds(`
@@ -154,20 +179,13 @@ input.onGesture(Gesture.LogoDown, function () {
         # . . # .
         # # # . .
         `)
-})
-input.onGesture(Gesture.ThreeG, function () {
     basic.showLeds(`
-        . . # . .
-        . . # . .
-        # # . # #
-        . . # . .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . . # . .
-        # # # # #
         . . . . .
-        # . # . #
-        # . # . #
+        . # # # .
+        # # . # #
+        . # # # .
+        . . . . .
         `)
+    basic.pause(500)
 })
+radio.setGroup(150)
